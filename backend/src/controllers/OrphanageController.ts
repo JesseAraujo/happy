@@ -55,7 +55,7 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends,
+      open_on_weekends: open_on_weekends === 'true',
       images,
     };
 
@@ -69,7 +69,7 @@ export default {
       open_on_weekends: Yup.boolean().required(),
       images: Yup.array(
         Yup.object().shape({
-          pah: Yup.string().required(),
+          path: Yup.string().required(),
         })
       ),
     });
